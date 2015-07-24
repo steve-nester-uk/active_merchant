@@ -212,19 +212,17 @@ module ActiveMerchant #:nodoc:
       def add_customer_data(post, options)
         if options[:customer]
           post[:customer] = {
-            if options[:customer][:merchantCustomerId]
-              merchantCustomerId:  options[:customer][:merchantCustomerId],
-            end
+            #merchantCustomerId:  options[:customer][:merchantCustomerId],
             givenName:  options[:customer][:givenName],
             surname:  options[:customer][:surname],
-            birthDate:  options[:customer][:birthDate],
-            phone:  options[:customer][:phone],
-            mobile:  options[:customer][:mobile],
-            email:  options[:customer][:email],
-            companyName:  options[:customer][:companyName],
-            identificationDocType:  options[:customer][:identificationDocType],
-            identificationDocId:  options[:customer][:identificationDocId],
-            ip:  options[:customer][:ip],
+            #birthDate:  options[:customer][:birthDate],
+            #phone:  options[:customer][:phone],
+            #mobile:  options[:customer][:mobile],
+            #email:  options[:customer][:email],
+            #companyName:  options[:customer][:companyName],
+            #identificationDocType:  options[:customer][:identificationDocType],
+            #identificationDocId:  options[:customer][:identificationDocId],
+            #ip:  options[:customer][:ip],
           }
         end
       end
