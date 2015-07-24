@@ -212,7 +212,8 @@ module ActiveMerchant #:nodoc:
       def add_customer_data(post, options)
         if options[:customer]
           post[:customer] = {
-            merchantCustomerId:  options[:customer][:merchantCustomerId],
+            if options[:customer][:merchantCustomerId]
+              merchantCustomerId:  options[:customer][:merchantCustomerId],
             givenName:  options[:customer][:givenName],
             surname:  options[:customer][:surname],
             birthDate:  options[:customer][:birthDate],
