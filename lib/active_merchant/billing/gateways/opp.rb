@@ -267,9 +267,10 @@ module ActiveMerchant #:nodoc:
             }
           else
             if payment.brand == 'AMERICAN_EXPRESS'
-              payment.brand = 'AMEX'
+              post[:paymentBrand] = 'AMEX'
+            else
+              post[:paymentBrand] = payment.brand.upcase
             end
-            post[:paymentBrand] = payment.brand.upcase
             post[:card] = {
               holder: payment.name,
               number: payment.number,
