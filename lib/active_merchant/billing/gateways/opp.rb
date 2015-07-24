@@ -256,7 +256,7 @@ module ActiveMerchant #:nodoc:
           post[:currency] = (currency(money) || @options[:currency]) if 'RV'!=(post[:paymentType])
           post[:descriptor] = options[:description] || options[:descriptor]  
           post[:merchantInvoiceId] = options[:merchantInvoiceId] || options[:order_id] 
-          post[:merchantTransactionId] = options[:merchantTransactionId]  
+          post[:merchantTransactionId] = options[:merchantTransactionId] || options[:order_id]
       end
 
       def add_payment_method(post, payment, options)
