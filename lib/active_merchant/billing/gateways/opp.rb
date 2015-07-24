@@ -213,8 +213,8 @@ module ActiveMerchant #:nodoc:
         if options[:customer]
           post[:customer] = {
             #merchantCustomerId:  options[:customer][:merchantCustomerId],
-            givenName:  options[:customer][:givenName],
-            surname:  options[:customer][:surname],
+            #givenName:  options[:customer][:givenName],
+            #surname:  options[:customer][:surname],
             #birthDate:  options[:customer][:birthDate],
             #phone:  options[:customer][:phone],
             #mobile:  options[:customer][:mobile],
